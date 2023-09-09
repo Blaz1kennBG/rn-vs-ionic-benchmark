@@ -1,0 +1,29 @@
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ng-container *ngIf="user$ | async as user">
+    <section>
+      <h1>General Information</h1>
+      <div class="custom-list">
+        <span class="custom-list-item">Username: {{user.username}}</span>
+        <span class="custom-list-item">Name: {{user.name}}</span>
+        <span class="custom-list-item">Email: {{user.email}}</span>
+        <span class="custom-list-item">Phone: {{user.phone}}</span>
+      </div>
+    </section>
+    <section>
+      <h1>Company Information</h1>
+      <div class="custom-list">
+        <span class="custom-list-item">Name: {{user.company.name}}</span>
+        <span class="custom-list-item"
+          >Catchphrase: {{user.company.catchPhrase}}</span
+        >
+        <span class="custom-list-item">BS: {{user.company.bs}}</span>
+      </div>
+    </section>
+    <section>
+      <h1>Misc. Information</h1>
+      <div class="custom-list">
+        <span class="custom-list-item">Misc: {{user.website}}</span>
+      </div>
+    </section>
+  </ng-container>
+</ion-content>

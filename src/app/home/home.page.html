@@ -1,0 +1,12 @@
+<ion-content class="ion-padding" [fullscreen]="true">
+  <button class="sort-btn" (click)="sortByAZ()">Sort by A-Z</button>
+  <div class="custom-list">
+    <div
+      class="custom-list-item"
+      *ngFor="let user of users$ | async"
+      [routerLink]="[user.id]"
+    >
+      {{user.id}}. {{user.name}}
+    </div>
+  </div>
+</ion-content>
